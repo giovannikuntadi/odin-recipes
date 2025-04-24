@@ -53,19 +53,16 @@
           namespace.config = lotameConfig;
           namespace.data = lotameTagInput.data || {};
           namespace.cmd = namespace.cmd || [];
-            
-        function setCookie(name, value, days) {
+
+          let myVar = window.lotame_17037.getAudiences();
+      
           let expires = "";
           if (days) {
             const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
           }
-          document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
-        // Example: Set the value of the variable 'myVar' as a cookie named 'myCookie' that expires in 7 days
-        let myVar = window.lotame_17037.getAudiences();
-        setCookie("vwoCookie", myVar, 1);
+          document.cookie = "vwoCookie" + "=" + (myVar || "") + 1 + "; path=/";
         }();
       </script>
     <script async src=https://tags.crwdcntrl.net/lt/c/17037/lt.min.js></script>
