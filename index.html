@@ -42,7 +42,7 @@
             data: {},
             config: {
               clientId: Number(lotameClientId),
-              audienceLocalStorage: true,
+              audienceLocalStorage: audLocalStorageKey,
               onProfileReady: audienceReadyCallback
             }
           };
@@ -53,10 +53,7 @@
           namespace.config = lotameConfig;
           namespace.data = lotameTagInput.data || {};
           namespace.cmd = namespace.cmd || [];
-        }();
-      </script>
-    <script async src=https://tags.crwdcntrl.net/lt/c/17037/lt.min.js></script>
-    <script>
+            
         function setCookie(name, value, days) {
           let expires = "";
           if (days) {
@@ -68,8 +65,10 @@
         }
         // Example: Set the value of the variable 'myVar' as a cookie named 'myCookie' that expires in 7 days
         let myVar = window.lotame_17037.getAudiences();
-        // setCookie("vwoCookie", myVar, 1);
-    </script>
+        setCookie("vwoCookie", myVar, 1);
+        }();
+      </script>
+    <script async src=https://tags.crwdcntrl.net/lt/c/17037/lt.min.js></script>
     <!-- Start VWO Async SmartCode -->
     <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
     <script type='text/javascript' id='vwoCode'>
