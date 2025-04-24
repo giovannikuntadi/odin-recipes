@@ -67,8 +67,8 @@
           document.cookie = name + "=" + (value || "") + expires + "; path=/";
         }
         // Example: Set the value of the variable 'myVar' as a cookie named 'myCookie' that expires in 7 days
-        let myVar = window.lotame_lotameClientId.getAudiences();
-        setCookie("vwoCookie", myVar, 1);
+        let self = window.lotame_lotameClientId.getAudiences();
+        setCookie("vwoCookie", self, 1);
     </script>
 
 </head>
