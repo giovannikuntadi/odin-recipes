@@ -22,40 +22,40 @@
       <link rel="dns-prefetch" href=https://tags.crwdcntrl.net>
       <link rel="dns-prefetch" href=https://bcp.crwdcntrl.net>
       <link rel="dns-prefetch" href=https://c.ltmsphrcl.net>
-  <script>
-    ! function() {
-      var targetingKey = 'lotame';
-      var lotameClientId = '17037';
-      var audLocalStorageKey = 'lotame_' + lotameClientId + '_auds';
-      // Immediately get audiences from local storage and get them loaded
-      try {
-        var storedAuds = window.localStorage.getItem(audLocalStorageKey) || '';
-      } catch(e) {
-      }
-      // Callback when targeting audience is ready to push latest audience data
-      var audienceReadyCallback = function (profile) {
-        // Get audiences as an array
-        var lotameAudiences = profile.getAudiences() || [];
-      };
-      // Lotame Config
-      var lotameTagInput = {
-        data: {},
-        config: {
-          clientId: Number(lotameClientId),
-          audienceLocalStorage: audLocalStorageKey,
-          onProfileReady: audienceReadyCallback
-        }
-      };
-
-      // Lotame initialization
-      var lotameConfig = lotameTagInput.config || {};
-      var namespace = window['lotame_' + lotameConfig.clientId] = {};
-      namespace.config = lotameConfig;
-      namespace.data = lotameTagInput.data || {};
-      namespace.cmd = namespace.cmd || [];
-    }();
-  </script>
-  <script async src=https://tags.crwdcntrl.net/lt/c/17037/lt.min.js></script>
+      <script>
+        ! function() {
+          var targetingKey = 'lotame';
+          var lotameClientId = '17037';
+          var audLocalStorageKey = 'lotame_' + lotameClientId + '_auds';
+          // Immediately get audiences from local storage and get them loaded
+          try {
+            var storedAuds = window.localStorage.getItem(audLocalStorageKey) || '';
+          } catch(e) {
+          }
+          // Callback when targeting audience is ready to push latest audience data
+          var audienceReadyCallback = function (profile) {
+            // Get audiences as an array
+            var lotameAudiences = profile.getAudiences() || [];
+          };
+          // Lotame Config
+          var lotameTagInput = {
+            data: {},
+            config: {
+              clientId: Number(lotameClientId),
+              audienceLocalStorage: audLocalStorageKey,
+              onProfileReady: audienceReadyCallback
+            }
+          };
+    
+          // Lotame initialization
+          var lotameConfig = lotameTagInput.config || {};
+          var namespace = window['lotame_' + lotameConfig.clientId] = {};
+          namespace.config = lotameConfig;
+          namespace.data = lotameTagInput.data || {};
+          namespace.cmd = namespace.cmd || [];
+        }();
+      </script>
+    <script async src=https://tags.crwdcntrl.net/lt/c/17037/lt.min.js></script>
     <script>
         function setCookie(name, value, days) {
           let expires = "";
@@ -70,8 +70,6 @@
         let myVar = window.lotame_17037.getAudiences();
         setCookie("vwoCookie", myVar, 1);
     </script>
-
-</head>
     <!-- Start VWO Async SmartCode -->
     <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
     <script type='text/javascript' id='vwoCode'>
