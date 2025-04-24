@@ -58,25 +58,6 @@
     }();
     </script>
     <script async src=https://tags.crwdcntrl.net/lt/c/17037/lt.min.js></script>
-    <script>
-         // Set cookie var
-        let myVariable = window.lotame_17037.getAudiences();
-        let cookieName = "vwoCookie";
-        let expirationDays = 1; // Optional: Set the cookie to expire after a certain number of days
-
-        // Construct the cookie string
-        let cookieString = `${cookieName}=${myVariable};path=/`;
-
-        // Add expiration date if needed
-        if (expirationDays) {
-        let date = new Date();
-        date.setTime(date.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
-        cookieString += `;expires=${date.toUTCString()}`;
-        }
-
-        // Set the cookie
-        document.cookie = cookieString;
-    </script>
     <!-- End Lotame Audience Extraction API -->
 
     <!-- Start VWO Async SmartCode -->
@@ -120,6 +101,25 @@
             window.location.href = "https://giovannikuntadi96.github.io/iod-test/";
         })
     </script> -->
+    <script>
+         // Set cookie var
+        let myVariable = window.lotame_17037.getAudiences();
+        let cookieName = "vwoCookie";
+        let expirationDays = 1; // Optional: Set the cookie to expire after a certain number of days
+
+        // Construct the cookie string
+        let cookieString = `${cookieName}=${myVariable};path=/`;
+
+        // Add expiration date if needed
+        if (expirationDays) {
+        let date = new Date();
+        date.setTime(date.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
+        cookieString += `;expires=${date.toUTCString()}`;
+        }
+
+        // Set the cookie
+        document.cookie = cookieString;
+    </script>
 </body>
 
 </html>
